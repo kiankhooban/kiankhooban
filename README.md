@@ -18,7 +18,7 @@
 
 I am a third-year Computer Science student at York University (Lassonde School of Engineering). I work at two layers of the stack: **deep learning for medical imaging**, and **computer arithmetic and VLSI**. The thread between them is a design taste I keep returning to: put the hard, verifiable guarantee in the core and reserve the intelligence for the edge, where it earns its cost.
 
-I am building toward the intersection of technology, research, and finance.
+I am building toward the intersection of technology and research.
 
 <br/>
 

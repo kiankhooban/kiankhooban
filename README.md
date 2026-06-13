@@ -9,7 +9,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:56c5e8&height=110&section=header" width="100%" alt=""/>
 
 <a href="https://github.com/DenverCoder1/readme-typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Major+Mono+Display&weight=700&size=38&pause=1000&color=56C5E8&center=true&vCenter=true&repeat=false&width=720&height=80&lines=kian+khooban" alt="Kian Khooban" />
+  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&weight=400&size=26&pause=1000&color=56C5E8&center=true&vCenter=true&repeat=false&width=780&height=80&lines=KIAN+KHOOBAN" alt="Kian Khooban" />
 </a>
 
 <p><sub>CS &nbsp;·&nbsp; York University (Lassonde)</sub></p>

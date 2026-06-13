@@ -6,6 +6,8 @@
 
 <div align="center">
 
+<img src="./assets/dino-run.gif" width="100%" alt="pixel dino jumping cacti" />
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:56c5e8&height=110&section=header" width="100%" alt=""/>
 
 <a href="https://github.com/DenverCoder1/readme-typing-svg">

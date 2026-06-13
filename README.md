@@ -60,10 +60,10 @@ An AI-powered settlement navigator that helps refugees and immigrants find the r
 ### Toolbox
 
 <p>
-  <img src="https://skillicons.dev/icons?i=py,pytorch,ts,react,nextjs,tailwind,azure,git&theme=dark" alt="skills" />
+  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,ts,js,java,c,react,nextjs,tailwind,arduino,azure,vercel,git,linux&perline=8&theme=dark" alt="skills" />
 </p>
 
-<sub>Also working in SystemVerilog and Verilog (RTL design), and with MONAI for medical imaging.</sub>
+<sub>Also: RISC-V &nbsp;·&nbsp; SystemVerilog / Verilog (RTL design) &nbsp;·&nbsp; Jupyter &nbsp;·&nbsp; MONAI &nbsp;·&nbsp; Unix shell</sub>
 
 <br/>
 

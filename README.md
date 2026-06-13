@@ -6,7 +6,13 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:56c5e8&height=170&section=header&text=Kian%20Khooban&fontColor=ffffff&fontSize=46&fontAlignY=36&desc=CS%20%C2%B7%20York%20University%20(Lassonde)&descSize=16&descAlignY=58" width="100%" alt="Kian Khooban"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:56c5e8&height=110&section=header" width="100%" alt=""/>
+
+<a href="https://github.com/DenverCoder1/readme-typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=42&pause=1000&color=56C5E8&center=true&vCenter=true&repeat=false&width=720&height=74&lines=KIAN+KHOOBAN" alt="Kian Khooban" />
+</a>
+
+<p><sub>CS &nbsp;·&nbsp; York University (Lassonde)</sub></p>
 
 <a href="https://github.com/DenverCoder1/readme-typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1200&color=56C5E8&center=true&vCenter=true&width=620&lines=Deep+learning+for+medical+imaging;Computer+arithmetic+%26+VLSI;Hard+guarantees+in+the+core%2C+intelligence+at+the+edge" alt="typing" />

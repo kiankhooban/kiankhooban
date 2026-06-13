@@ -12,7 +12,9 @@
   <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&weight=400&size=26&pause=1000&color=56C5E8&center=true&vCenter=true&repeat=false&width=780&height=80&lines=KIAN+KHOOBAN" alt="Kian Khooban" />
 </a>
 
-<p><sub>CS &nbsp;·&nbsp; York University (Lassonde)</sub></p>
+<a href="https://github.com/DenverCoder1/readme-typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Newsreader&weight=500&size=20&pause=1000&color=9FB3C8&center=true&vCenter=true&repeat=false&width=560&height=42&lines=CS+%C2%B7+York+University+(Lassonde)" alt="CS · York University (Lassonde)" />
+</a>
 
 <a href="https://github.com/DenverCoder1/readme-typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1200&color=56C5E8&center=true&vCenter=true&width=620&lines=Deep+learning+for+medical+imaging;Computer+arithmetic+%26+VLSI;Hard+guarantees+in+the+core%2C+intelligence+at+the+edge" alt="typing" />

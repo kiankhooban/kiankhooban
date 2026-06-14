@@ -45,11 +45,11 @@ A medical reversal radar that flags treatments whose evidence has already been o
 </td>
 <td width="50%" valign="top">
 
-**[Arrive](https://github.com/kiankhooban/Arrive)**
+**[LinkedIn](https://linkedin.com/in/kiankhooban)**
 
-An AI-powered settlement navigator that helps refugees and immigrants find the right resources in Canada. Built at the IBM Z x UNSA Sheridan hackathon.
+Connect on LinkedIn for research collaborations, ML engineering conversations, or hardware-adjacent opportunities.
 
-`React` `Vite` `watsonx.ai` `Vercel`
+`linkedin.com/in/kiankhooban`
 
 </td>
 </tr>
@@ -60,10 +60,10 @@ An AI-powered settlement navigator that helps refugees and immigrants find the r
 ### Toolbox
 
 <p>
-  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,ts,js,java,c,react,nextjs,tailwind,arduino,azure,vercel,git,linux&perline=8&theme=dark" alt="skills" />
+  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,ts,js,java,c,react,nextjs,tailwind,docker,azure,vercel,git,linux,arduino&perline=8&theme=dark" alt="skills" />
 </p>
 
-<sub>Also: RISC-V &nbsp;·&nbsp; SystemVerilog / Verilog (RTL design) &nbsp;·&nbsp; Jupyter &nbsp;·&nbsp; MONAI &nbsp;·&nbsp; Unix shell</sub>
+<sub>Also: RISC-V &nbsp;·&nbsp; SystemVerilog / Verilog (RTL design) &nbsp;·&nbsp; MONAI &nbsp;·&nbsp; FastAPI &nbsp;·&nbsp; Electron &nbsp;·&nbsp; MS SQL Server &nbsp;·&nbsp; Vivado &nbsp;·&nbsp; Jupyter</sub>
 
 <br/>
 

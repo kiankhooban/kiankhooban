@@ -2,29 +2,22 @@
   GitHub profile README for kiankhooban
   Lives in the repo named exactly "kiankhooban" (must be PUBLIC to display).
   Theme: ice/glacier blue (#56C5E8) on GitHub dark. Editorial, restrained.
+  Hero: assets/hero-{dark,light}.svg — self-hosted animated SVG, sequenced
+  intro + cycling taglines. Edit the SVGs directly to change name/taglines.
 -->
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:56c5e8&height=110&section=header" width="100%" alt=""/>
-
-<a href="https://github.com/DenverCoder1/readme-typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&weight=400&size=26&pause=1000&color=56C5E8&center=true&vCenter=true&repeat=false&width=780&height=80&lines=KIAN+KHOOBAN" alt="Kian Khooban" />
-</a>
-
-<a href="https://github.com/DenverCoder1/readme-typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Newsreader&weight=500&size=20&pause=1000&color=9FB3C8&center=true&vCenter=true&repeat=false&width=560&height=42&lines=CS+%C2%B7+York+University+(Lassonde)" alt="CS · York University (Lassonde)" />
-</a>
-
-<a href="https://github.com/DenverCoder1/readme-typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1200&color=56C5E8&center=true&vCenter=true&width=620&lines=Deep+learning+for+medical+imaging;Computer+arithmetic+%26+VLSI;Hard+guarantees+in+the+core%2C+intelligence+at+the+edge" alt="typing" />
-</a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <img src="assets/hero-light.svg" width="100%" alt="Kian Khooban — CS, York University (Lassonde)">
+</picture>
 
 </div>
 
 ---
 
-I am a third-year Computer Science student at York University (Lassonde School of Engineering). I work at two layers of the stack: **deep learning for medical imaging**, and **computer arithmetic and VLSI**. The thread between them is a design taste I keep returning to: put the hard, verifiable guarantee in the core and reserve the intelligence for the edge, where it earns its cost.
+I am a fourth-year Computer Science student at York University (Lassonde School of Engineering). I work at two layers of the stack: **deep learning for medical imaging**, and **compute-in-memory and computer arithmetic**. The thread between them is a design taste I keep returning to: put the hard, verifiable guarantee in the core and reserve the intelligence for the edge, where it earns its cost.
 
 I am building toward the intersection of technology and research.
 

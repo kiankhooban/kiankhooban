@@ -1,0 +1,87 @@
+<svg width="840" height="210" viewBox="0 0 840 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kian Khooban. CS, York University (Lassonde). Deep learning for medical imaging. Compute-in-memory and computer arithmetic.">
+  <style>
+    .name {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 42px; font-weight: 600; letter-spacing: 11px;
+      fill: #1F2328;
+    }
+    .sub {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px; font-weight: 400; letter-spacing: 3.5px;
+      fill: #57606A;
+      opacity: 0;
+      animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.25s forwards;
+    }
+    .tag {
+      font-family: 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 15px; letter-spacing: 0.5px;
+      fill: #0E7490;
+      opacity: 0;
+      animation: cycle 13.5s linear infinite;
+    }
+    .tag:nth-of-type(1) { animation-delay: 1.9s; }
+    .tag:nth-of-type(2) { animation-delay: 6.4s; }
+    .tag:nth-of-type(3) { animation-delay: 10.9s; }
+
+    #wipe    { transform: scaleX(0); transform-origin: 0 0;
+               animation: wipe 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards; }
+    #nameG   { transform: translateY(6px);
+               animation: settle 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards; }
+    #rule    { transform: scaleX(0); transform-origin: 420px 0;
+               animation: rule 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards; }
+    #glow    { opacity: 0; animation: glowIn 2s ease-out 0.2s forwards; }
+
+    @keyframes wipe    { to { transform: scaleX(1); } }
+    @keyframes settle  { to { transform: translateY(0); } }
+    @keyframes rule    { to { transform: scaleX(1); } }
+    @keyframes glowIn  { to { opacity: 1; } }
+    @keyframes rise    { from { opacity: 0; transform: translateY(8px); }
+                         to   { opacity: 1; transform: translateY(0); } }
+    @keyframes cycle {
+      0%      { opacity: 0; transform: translateY(5px); }
+      2.5%    { opacity: 1; transform: translateY(0); }
+      29.5%   { opacity: 1; transform: translateY(0); }
+      33%     { opacity: 0; transform: translateY(-5px); }
+      100%    { opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #wipe, #nameG, #rule, #glow, .sub { animation: none; }
+      #wipe, #rule { transform: scaleX(1); }
+      #nameG { transform: none; }
+      #glow, .sub { opacity: 1; }
+      .tag { animation: none; opacity: 0; }
+      .tag:nth-of-type(1) { opacity: 1; }
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="glowGrad" cx="50%" cy="42%" r="55%">
+      <stop offset="0%"  stop-color="#0E7490" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#0E7490" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#0E7490" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ruleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#0E7490" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#0E7490" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0E7490" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="nameMask">
+      <rect id="wipe" x="120" y="30" width="600" height="60" fill="#fff"/>
+    </mask>
+  </defs>
+
+  <rect id="glow" width="840" height="210" fill="url(#glowGrad)"/>
+
+  <g id="nameG">
+    <text class="name" x="426" y="74" text-anchor="middle" mask="url(#nameMask)">KIAN KHOOBAN</text>
+  </g>
+
+  <rect id="rule" x="280" y="94" width="280" height="1.5" fill="url(#ruleGrad)"/>
+
+  <text class="sub" x="422" y="126" text-anchor="middle">CS &#183; YORK UNIVERSITY &#183; LASSONDE</text>
+
+  <text class="tag" x="420" y="168" text-anchor="middle">deep learning for medical imaging</text>
+  <text class="tag" x="420" y="168" text-anchor="middle">compute-in-memory &amp; computer arithmetic</text>
+  <text class="tag" x="420" y="168" text-anchor="middle">hard guarantees in the core, intelligence at the edge</text>
+</svg>

@@ -18,45 +18,48 @@
       font-family: 'TextSub', 'Helvetica Neue', Arial, sans-serif;
       font-size: 12.5px; letter-spacing: 5.5px;
       fill: #9FB3C8;
-      opacity: 0;
-      animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) 1.45s forwards;
+      animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) 1.45s backwards;
     }
     .tag {
       font-family: 'TextSub', 'Helvetica Neue', Arial, sans-serif;
       font-size: 14px; letter-spacing: 2px;
       fill: #56C5E8;
-      opacity: 0;
-      animation: cycle 13.5s linear infinite;
     }
-    .tag:nth-of-type(1) { animation-delay: 2.1s; }
-    .tag:nth-of-type(2) { animation-delay: 6.6s; }
-    .tag:nth-of-type(3) { animation-delay: 11.1s; }
+    /* Base states are all VISIBLE; animations only travel FROM the hidden
+       state ("backwards" fill). If the renderer freezes the first frame or
+       never starts animations (SVG-as-image quirk), the hero still reads. */
+    .tag:nth-of-type(1) { animation: cycleA 13.5s linear infinite; }
+    .tag:nth-of-type(2) { opacity: 0; animation: cycleB 13.5s linear 4.5s infinite; }
+    .tag:nth-of-type(3) { opacity: 0; animation: cycleB 13.5s linear 9s infinite; }
 
-    #wipe  { transform: scaleX(0); transform-origin: 0 0;
-             animation: wipe 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards; }
-    #nameG { transform: translateY(7px);
-             animation: settle 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards; }
-    #rule  { transform: scaleX(0); transform-origin: 420px 0;
-             animation: rule 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards; }
+    #wipe  { transform-origin: 0 0;
+             animation: wipe 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.45s backwards; }
+    #nameG { animation: settle 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.45s backwards; }
+    #rule  { transform-origin: 420px 0;
+             animation: rulein 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s backwards; }
 
-    #aurora { opacity: 0; animation: auroraIn 2.4s ease-out 0.1s forwards; }
+    #aurora { opacity: 0.2; animation: auroraIn 2.4s ease-out 0.1s backwards; }
     #blobA  { animation: driftA 26s ease-in-out 2s infinite alternate; }
     #blobB  { animation: driftB 34s ease-in-out 2s infinite alternate; }
     #blobC  { animation: driftC 30s ease-in-out 2s infinite alternate; }
 
-    @keyframes wipe     { to { transform: scaleX(1); } }
-    @keyframes settle   { to { transform: translateY(0); } }
-    @keyframes rule     { to { transform: scaleX(1); } }
-    @keyframes auroraIn { to { opacity: 0.2; } }
-    @keyframes rise     { from { opacity: 0; transform: translateY(9px); }
-                          to   { opacity: 1; transform: translateY(0); } }
-    @keyframes driftA   { from { transform: translate(0px, 0px); }
-                          to   { transform: translate(70px, 14px); } }
-    @keyframes driftB   { from { transform: translate(0px, 0px); }
-                          to   { transform: translate(-80px, -10px); } }
-    @keyframes driftC   { from { transform: translate(0px, 0px) scale(1); }
-                          to   { transform: translate(40px, -16px) scale(1.15); } }
-    @keyframes cycle {
+    @keyframes wipe     { from { transform: scaleX(0); } }
+    @keyframes settle   { from { transform: translateY(7px); } }
+    @keyframes rulein   { from { transform: scaleX(0); } }
+    @keyframes auroraIn { from { opacity: 0; } }
+    @keyframes rise     { from { opacity: 0; transform: translateY(9px); } }
+    @keyframes driftA   { to { transform: translate(70px, 14px); } }
+    @keyframes driftB   { to { transform: translate(-80px, -10px); } }
+    @keyframes driftC   { to { transform: translate(40px, -16px) scale(1.15); } }
+    /* First tagline starts visible (robust static frame), then joins the cycle. */
+    @keyframes cycleA {
+      0%    { opacity: 1; transform: translateY(0); }
+      29.5% { opacity: 1; transform: translateY(0); }
+      33%   { opacity: 0; transform: translateY(-5px); }
+      96.5% { opacity: 0; transform: translateY(5px); }
+      100%  { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes cycleB {
       0%    { opacity: 0; transform: translateY(5px); }
       2.5%  { opacity: 1; transform: translateY(0); }
       29.5% { opacity: 1; transform: translateY(0); }
@@ -65,13 +68,8 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      #wipe, #nameG, #rule, #aurora, #blobA, #blobB, #blobC, .sub { animation: none; }
-      #wipe, #rule { transform: scaleX(1); }
-      #nameG { transform: none; }
-      #aurora { opacity: 0.2; }
-      .sub { opacity: 1; }
-      .tag { animation: none; opacity: 0; }
-      .tag:nth-of-type(1) { opacity: 1; }
+      #wipe, #nameG, #rule, #aurora, #blobA, #blobB, #blobC, .sub, .tag { animation: none; }
+      .tag:nth-of-type(2), .tag:nth-of-type(3) { opacity: 0; }
     }
   </style>
 

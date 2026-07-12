@@ -2,7 +2,7 @@
   GitHub profile README for kiankhooban
   Lives in the repo named exactly "kiankhooban" (must be PUBLIC to display).
   Theme: ice/glacier blue (#56C5E8) on GitHub dark. Editorial, restrained.
-  Hero: assets/hero.svg, a self-hosted animated SVG (Prata + Tenor Sans
+  Hero: assets/hero.svg, a self-hosted animated SVG (Inter Display (Helvetica-class grotesque)
   subset and embedded as base64). It paints its own dark glacier panel so it
   renders identically on light and dark GitHub; do not split it into
   theme variants via <picture>, that trick follows the OS theme, not the

@@ -2,16 +2,16 @@
   GitHub profile README for kiankhooban
   Lives in the repo named exactly "kiankhooban" (must be PUBLIC to display).
   Theme: ice/glacier blue (#56C5E8) on GitHub dark. Editorial, restrained.
-  Hero: assets/hero-{dark,light}.svg — self-hosted animated SVG, sequenced
-  intro + cycling taglines. Edit the SVGs directly to change name/taglines.
+  Hero: assets/hero.svg, a self-hosted animated SVG (Prata + Tenor Sans
+  subset and embedded as base64). It paints its own dark glacier panel so it
+  renders identically on light and dark GitHub; do not split it into
+  theme variants via <picture>, that trick follows the OS theme, not the
+  GitHub theme, and goes invisible on mismatch.
 -->
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img src="assets/hero-light.svg" width="100%" alt="Kian Khooban — CS, York University (Lassonde)">
-</picture>
+<img src="assets/hero.svg" width="100%" alt="Kian Khooban. Computer Science, York University (Lassonde).">
 
 </div>
 

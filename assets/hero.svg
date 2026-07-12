@@ -47,7 +47,7 @@
     @keyframes wipe     { to { transform: scaleX(1); } }
     @keyframes settle   { to { transform: translateY(0); } }
     @keyframes rule     { to { transform: scaleX(1); } }
-    @keyframes auroraIn { to { opacity: 0.16; } }
+    @keyframes auroraIn { to { opacity: 0.2; } }
     @keyframes rise     { from { opacity: 0; transform: translateY(9px); }
                           to   { opacity: 1; transform: translateY(0); } }
     @keyframes driftA   { from { transform: translate(0px, 0px); }
@@ -68,7 +68,7 @@
       #wipe, #nameG, #rule, #aurora, #blobA, #blobB, #blobC, .sub { animation: none; }
       #wipe, #rule { transform: scaleX(1); }
       #nameG { transform: none; }
-      #aurora { opacity: 0.16; }
+      #aurora { opacity: 0.2; }
       .sub { opacity: 1; }
       .tag { animation: none; opacity: 0; }
       .tag:nth-of-type(1) { opacity: 1; }
@@ -105,9 +105,18 @@
     <mask id="nameMask">
       <rect id="wipe" x="90" y="34" width="660" height="66" fill="#fff"/>
     </mask>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0A141F"/>
+      <stop offset="100%" stop-color="#0D1B26"/>
+    </linearGradient>
+    <clipPath id="panelClip">
+      <rect x="0" y="0" width="840" height="240" rx="10"/>
+    </clipPath>
   </defs>
 
-  <g id="aurora" mask="url(#edgeFade)">
+  <rect x="0.5" y="0.5" width="839" height="239" rx="10" fill="url(#bgGrad)" stroke="#1D2B38"/>
+
+  <g id="aurora" clip-path="url(#panelClip)" mask="url(#edgeFade)">
     <ellipse id="blobA" cx="300" cy="90"  rx="260" ry="110" fill="url(#gA)"/>
     <ellipse id="blobB" cx="560" cy="130" rx="300" ry="120" fill="url(#gB)"/>
     <ellipse id="blobC" cx="430" cy="60"  rx="200" ry="90"  fill="url(#gC)"/>

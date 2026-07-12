@@ -18,7 +18,6 @@
       font-family: 'TextSub', 'Helvetica Neue', Arial, sans-serif;
       font-size: 12.5px; letter-spacing: 5.5px;
       fill: #9FB3C8;
-      animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) 1.45s backwards;
     }
     .tag {
       font-family: 'TextSub', 'Helvetica Neue', Arial, sans-serif;
@@ -28,26 +27,20 @@
     /* Base states are all VISIBLE; animations only travel FROM the hidden
        state ("backwards" fill). If the renderer freezes the first frame or
        never starts animations (SVG-as-image quirk), the hero still reads. */
+    /* Chromium can freeze SVG-as-image at the FIRST FRAME (seen
+       nondeterministically on GitHub). So: no entrance animations; t=0 is
+       the complete hero. Only aurora drift and the tagline cycle animate,
+       and both look correct frozen at t=0 (tagline 1 starts visible). */
     .tag:nth-of-type(1) { animation: cycleA 13.5s linear infinite; }
     .tag:nth-of-type(2) { opacity: 0; animation: cycleB 13.5s linear 4.5s infinite; }
     .tag:nth-of-type(3) { opacity: 0; animation: cycleB 13.5s linear 9s infinite; }
 
-    #wipe  { transform-origin: 0 0;
-             animation: wipe 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.45s backwards; }
-    #nameG { animation: settle 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.45s backwards; }
-    #rule  { transform-origin: 420px 0;
-             animation: rulein 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s backwards; }
 
-    #aurora { opacity: 0.2; animation: auroraIn 2.4s ease-out 0.1s backwards; }
+    #aurora { opacity: 0.2; }
     #blobA  { animation: driftA 26s ease-in-out 2s infinite alternate; }
     #blobB  { animation: driftB 34s ease-in-out 2s infinite alternate; }
     #blobC  { animation: driftC 30s ease-in-out 2s infinite alternate; }
 
-    @keyframes wipe     { from { transform: scaleX(0); } }
-    @keyframes settle   { from { transform: translateY(7px); } }
-    @keyframes rulein   { from { transform: scaleX(0); } }
-    @keyframes auroraIn { from { opacity: 0; } }
-    @keyframes rise     { from { opacity: 0; transform: translateY(9px); } }
     @keyframes driftA   { to { transform: translate(70px, 14px); } }
     @keyframes driftB   { to { transform: translate(-80px, -10px); } }
     @keyframes driftC   { to { transform: translate(40px, -16px) scale(1.15); } }
@@ -68,7 +61,6 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      #wipe, #nameG, #rule, #aurora, #blobA, #blobB, #blobC, .sub, .tag { animation: none; }
       .tag:nth-of-type(2), .tag:nth-of-type(3) { opacity: 0; }
     }
   </style>
@@ -100,9 +92,6 @@
     <mask id="edgeFade">
       <rect width="840" height="240" fill="url(#fadeY)"/>
     </mask>
-    <mask id="nameMask">
-      <rect id="wipe" x="90" y="34" width="660" height="66" fill="#fff"/>
-    </mask>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"  stop-color="#0A141F"/>
       <stop offset="100%" stop-color="#0D1B26"/>
@@ -121,7 +110,7 @@
   </g>
 
   <g id="nameG">
-    <text class="name" x="424" y="84" text-anchor="middle" mask="url(#nameMask)">KIAN KHOOBAN</text>
+    <text class="name" x="424" y="84" text-anchor="middle">KIAN KHOOBAN</text>
   </g>
 
   <rect id="rule" x="290" y="110" width="260" height="1" fill="url(#ruleGrad)"/>
